@@ -7,14 +7,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Invoices</title>
   <script type="text/javascript" src="index.js"></script>
+  <link rel="stylesheet" href="stylesheet.css">
 </head>
 
 <body>
   <h1>My Invoices</h1>
 
-  <form id="apiKeyForm">
-    Please enter your Stripe API key: <br><input type="text" name="stripeApiKeyInput">
-    <input type="button" value="Submit" onclick="getInvoices(stripeApiKeyInput.value)">
+  <form id="apiKeyForm" onsubmit="getInvoices(stripeApiKeyInput.value); return false">
+    Please enter your Stripe API key: <br><input type="text" name="stripeApiKeyInput" id="apiKeyInput">
+    <br>
+    <input type="button" value="Submit" onclick="getInvoices(stripeApiKeyInput.value)" id="submitbtn">
   </form>
+  <br>
+
+  <table id="invoicesTable">
+    <thead>
+      <tr>
+        <th>Invoice Number</th>
+        <th>Amount</th>
+        <th>Currency</th>
+        <th>Issued</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+  </table>
 </body>
 </html>

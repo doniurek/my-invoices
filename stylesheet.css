@@ -1,0 +1,43 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+h1 {
+  text-align: center;
+}
+
+table, th, tr, td {
+  width: 50%;
+  margin: auto
+}
+
+th {
+  padding: 20px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+form {
+  text-align: center;
+}
+
+#apiKeyInput {
+  width: 45%;
+  padding: 5px;
+  margin: 10px 0px 10px 0px;
+}
+
+#submitbtn {
+  padding: 6px 15px;
+  background-color: lightblue;
+  border: 1px solid;
+  border-radius: 2px;
+  font-weight: bold;
+}
