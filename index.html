@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Invoices</title>
+  <script type="text/javascript" src="index.js"></script>
+</head>
+
+<body>
+  <h1>My Invoices</h1>
+
+  <form id="apiKeyForm">
+    Please enter your Stripe API key: <br><input type="text" name="stripeApiKeyInput">
+    <input type="button" value="Submit" onclick="getInvoices(stripeApiKeyInput.value)">
+  </form>
+</body>
+</html>
