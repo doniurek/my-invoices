@@ -14,9 +14,17 @@
   <h1>My Invoices</h1>
 
   <form id="apiKeyForm" onsubmit="getInvoices(stripeApiKeyInput.value); return false">
-    Please enter your Stripe API key: <br><input type="text" name="stripeApiKeyInput" id="apiKeyInput">
+    Please enter your Stripe API key: <br><input type="password" name="stripeApiKeyInput" id="apiKeyInput">
     <br>
-    <input type="button" value="Submit" onclick="getInvoices(stripeApiKeyInput.value)" id="submitbtn">
+    <input type="button" value="Save API key" onclick="saveApiKey(stripeApiKeyInput.value)" id="savebtn">
+    <input
+      type="button"
+      value="Fetch the invoices list"
+      onclick="sessionStorage.getItem('apiKey')
+      ? getInvoices(sessionStorage.getItem('apiKey'))
+      : alert('Please input and save your API key first!')"
+      id="submitbtn"
+    >
   </form>
   <br>
 
@@ -24,9 +32,11 @@
     <thead>
       <tr>
         <th>Invoice Number</th>
+        <th>Invoice ID</th>
         <th>Amount</th>
         <th>Currency</th>
         <th>Issued</th>
+        <th id="deleteth"></th>
       </tr>
     </thead>
     <tbody id="tableBody">

@@ -7,12 +7,12 @@ h1 {
 }
 
 table, th, tr, td {
-  width: 50%;
+  width: 60%;
   margin: auto
 }
 
 th {
-  padding: 20px;
+  padding: 10px;
   text-align: left;
 }
 
@@ -28,6 +28,14 @@ form {
   text-align: center;
 }
 
+input[type=button] {
+  padding: 6px 15px;
+  border: 1px solid;
+  border-radius: 3px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 #apiKeyInput {
   width: 45%;
   padding: 5px;
@@ -35,9 +43,15 @@ form {
 }
 
 #submitbtn {
-  padding: 6px 15px;
+  background-color: rgb(173, 230, 192);
+}
+
+#savebtn {
   background-color: lightblue;
-  border: 1px solid;
-  border-radius: 2px;
-  font-weight: bold;
+}
+
+#paybtn {
+  background-color: rgb(220, 251, 218);
+  border: none;
+  color: rgb(17, 147, 7);
 }
